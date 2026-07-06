@@ -10,7 +10,7 @@ def main():
         sock = socket()
         sock.connect((ip, port))
         print(f"Port {port} is open")
-    except:
+    except OSError:
         print(f"Port {port} is closed")
     finally:
         sock.close()
